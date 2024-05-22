@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+    <script src="../path/to/flowbite/dist/datepicker.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Flat rent Web</title>
+
+
+    <style>
+        body { margin: 0; padding: 0; }
+        #md-openmap { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); align-items: center; justify-content: center; }
+        #md-openmap.active { display: flex; }
+        #mapModal { width: 80%; height: 80%; border: none; }
+        .modal-content {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-detail">
+        <header tabindex="-1" class="header-wrap fixed top-0 start-0 z-50 flex justify-between w-full h-auto border-b border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+            <div class="container pl-10 pr-10 flex">
+                <nav class="flex">
+                    <a class="navbar-brand" href="../html/index.html">
+                        <img src="../img/logo.png" alt="" class="flex" style="width: 192px; height: 140px;">
+                    </a>
+                    <div class="navbar-menu pt-16" style="width: 1000px;">
+                        <ul class="ul-menu flex center justify-center items-center" style="gap: 70px;">
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-btn flex pt-5 w-max" style="gap: 25px;">
+                        <button id="sign-in" class="bg-green-500 mt-5 rounded-lg hover:bg-green-400 text-white" style="width: 120px; height: 50px;">Sign in</button>
+                        <button id="sign-up" class="bg-green-500 mt-5 rounded-lg hover:bg-green-400 text-white" style="width: 120px; height: 50px;">Sign up</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="mt-16">
+            <div class="container relative">
+                <img src="../img/img_details/img_review.jpg" alt="" class="w-full h-96">
+                <div class="gradient absolute top-0 left-0 w-full h-full"></div>
+            
+                <span class="text-white text-4xl font-medium absolute top-56 left-0 pl-20">Listing Details</span>
+                <div class="text-white text-sm absolute top-64 left-0 pl-20 pt-5">
+                    <a href="#" class="hover:text-red-400">Home </a> /
+                    <a href="#" class="hover:text-red-400"> Property </a> /
+                    <a href="#" class="text-red-400">Listing Details</a>
+                </div>
+            </div>                   
+        </section>
+
+        <section class="mt-5">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="col-span-2 p-20 border border-gray-300">
+                    
+                    <div class="flex-col">
+                        <div class="flex">
+                            <span class="text-4xl font-medium">
+                                Luxury & Modern Apartment
+                            </span>
+                            <div class="flex pt-3 ml-auto">
+                                <span class="text-red-500 text-lg font-bold">$22,000/</span>
+                                <span class="text-gray-500 text-lg">month</span>
+                            </div>
+                        </div>
+                        <div class="flex pt-4 gap-36">
+                            <div class="flex">
+                                <img src="../img/img_details/click.gif" alt="" style="width: 20px; height: 20px; transform: rotate(75deg);" class="mr-1">
+                                <button class="border border-lime-500 rounded-lg hover:bg-emerald-300 pl-3 pr-3" id="openModalBtn">
+                                    <i class='fas fa-map-marked-alt'></i>
+                                </button>
+                                <span class="text-gray-400 ml-2">4521 Hilltop Street, Saint Just</span>
+                            </div>
+                            <div class="flex">
+                                <img src="../img/img_reviews/ruler.png" alt="" class="w-5 h-5">
+                                <span class="text-gray-400 ml-2">1100sqft</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container relative">
+                        <img src="../img/img_details/img1.jpg" alt="" class="rounded-lg mt-5 w-full">
+                        <div class="absolute top-4 left-4 w-24 h-8 bg-red-500 rounded-md flex justify-center items-center">
+                            <span class="text-white">For Rent</span>
+                        </div>
+                    </div>   
+                    
+                    <div class="flex-col pt-10">
+                        <span class="font-medium text-xl">Description</span>
+                        <p class="text-gray-500 text-sm pt-3 leading-loose">
+                            Cras ultricies ligula sed magna dictum porta. 
+                            Nulla quis lorem ut libero malesuada feugiat. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Quisque velit nisi, pretium ut lacinia in, elementum id enim. 
+                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat accumsan id imperdiet et, porttitor at sem. 
+                            Curabitur arcu erat accumsan id imperdiet et porttitor.
+                        </p>
+
+                        <p class="text-gray-500 text-sm pt-5 pb-10 leading-loose">
+                            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
+                            Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt. 
+                            Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. 
+                            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. 
+                            Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. 
+                            Proin eget tortor risus. Donec rutrum congue leo eget malesuada. 
+                            Pellentesque in ipsum id orci porta dapibus.
+                        </p>
+
+                        <div class="pb-10">
+                            <span class="font-medium text-xl">Property Details</span>
+                            <div class="grid grid-cols-3 gap-4 pb-5">
+                                <div class="flex-col pt-2 leading-loose">
+                                    <ul class="flex-col">
+                                        <li>
+                                            <span class="text-sm font-medium">Property ID : </span>
+                                            <span class="text-gray-500">V25680</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-sm font-medium">Property Price : </span>
+                                            <span class="text-gray-500">$34,000</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-sm font-medium">Bath : </span>
+                                            <span class="text-gray-500">2</span>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="flex-col pt-2 leading-loose">
+                                    <ul class="flex-col">
+                                        <li>
+                                            <span class="text-sm font-medium">Property Type : </span>
+                                            <span class="text-gray-500">Apartment</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-sm font-medium">Rooms : </span>
+                                            <span class="text-gray-500">6</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-sm font-medium">Garages : </span>
+                                            <span class="text-gray-500">4</span>
+                                        </li>
+                                    </ul>
+                                </div>
+    
+                                <div class="flex-col pt-2 leading-loose">
+                                    <ul class="flex-col">
+                                        <li>
+                                            <span class="text-sm font-medium">Property Status : </span>
+                                            <span class="text-gray-500">For Rent</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-sm font-medium">Bedrooms ID : </span>
+                                            <span class="text-gray-500">10</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-sm font-medium">Year Built : </span>
+                                            <span class="text-gray-500">14/02/22</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pb-10">
+                            <span class="font-medium text-xl">Floor Plans</span>
+                            <div class="flex justify-center items-center pt-10">
+                                <img src="../img/img_details/blueprint.png" alt="" class="rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="mt-2 text-2xl font-medium">Add Your Review</span>
+
+                    <div class="pt-5">
+                        <div class="border border-gray-300 p-5">
+                            <div class="flex">
+                                <div class="flex flex-col gap-5">
+                                    <span class="text-gray-500">Your ratings for this property</span>
+                                    <div class="flex items-center gap-2" id="star-container">
+                                        <i class="far fa-star star-icon rounded-full"></i>
+                                        <i class="far fa-star star-icon rounded-full"></i>
+                                        <i class="far fa-star star-icon rounded-full"></i>
+                                        <i class="far fa-star star-icon rounded-full"></i>
+                                        <i class="far fa-star star-icon rounded-full"></i>
+                                    </div>                                                                      
+                                </div>
+
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', () => {
+                                        const stars = document.querySelectorAll('#star-container .star-icon');
+                                        let clickedIndex = -1;
+                            
+                                        stars.forEach((star, index) => {
+                                            star.addEventListener('click', () => {
+                                                setStars(index);
+                                            });
+                                        });
+                            
+                                        function setStars(index) {
+                                            clickedIndex = index;
+                                            stars.forEach((star, i) => {
+                                                if (i <= index) {
+                                                    star.classList.add('bg-yellow-200');
+                                                } else {
+                                                    star.classList.remove('bg-yellow-200');
+                                                }
+                                            });
+                                        }
+                                    });
+                                </script>
+                                
+                                <div class="relative inline-block ml-auto">
+                                    <button class="bg-red-500 text-white pt-3 pb-3 pl-5 pr-5 mt-3 rounded-lg hover:bg-green-300 hover:text-black">Upload Image</button>
+                                    <input type="file" id="avatar-input" class="absolute inset-0 opacity-0 cursor-pointer" accept="image/*" onchange="previewImage(this)">
+                                </div>                                
+                            </div>
+
+                            <div class="flex gap-3 mt-2">
+                                <input type="text" class="mt-5 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="First Name">
+                                <input type="text" class="mt-5 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Last Name">
+                            </div>
+
+                            <div class="flex flex-col mt-2 gap-2">
+                                <input type="email" class="mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Email Address">
+
+                                <textarea name="" id="" placeholder="Write A View" class="mb-3 pl-5 pt-3 w-full h-32 border border-gray-200"></textarea>
+                            </div>
+
+                            <div class="mt-3">
+                                <button class="bg-red-500 text-white pt-3 pb-3 pl-7 pr-7 rounded-lg hover:bg-green-300 hover:text-black">Submit Review</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-span-1">
+                    <div class="flex justify-center items-center mb-2">
+                        <form action="" class="bg-white p-10 border border-gray-300">
+                            <span class="text-2xl font-medium">Book This Apartment</span>
+                            <input type="text" class="mt-5 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Full Name">
+                            <input type="text" class="mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Phone Number">
+                            <input type="email" class="mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Email Address">
+                            <select id="family-members" class="mb-3 bg-gray-50 border border-gray-300 text-gray-400 text-base focus:ring-blue-500 focus:border-blue-500  w-full h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="padding-left:18px;">
+                                <option selected>Family Members</option>
+                                <option value="$">2</option>
+                                <option value="$">4</option>
+                                <option value="$">6</option>
+                            </select>
+                            <select id="childrens" class="mb-3 bg-gray-50 border border-gray-300 text-gray-400 text-base focus:ring-blue-500 focus:border-blue-500  w-full h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="padding-left:18px;">
+                                <option selected>Family Members</option>
+                                <option value="$">1</option>
+                                <option value="$">2</option>
+                                <option value="$">3</option>
+                            </select>
+                            <textarea name="" id="" placeholder="Your Message" class="mb-3 pl-5 pt-3 w-full h-32 border border-gray-300"></textarea>
+                            <button class="bg-red-500 hover: hover:bg-green-300 text-white hover:text-black" style="width: 200px; height: 47px;">Request Booking</button>  
+                        </form>
+                    </div>
+
+                    <div class="p-10 border border-gray-300 mb-2">
+                        <span class="text-2xl font-medium">Recent Properties</span>
+                        <div class="flex-col mt-5">
+                            <div class="flex mb-3">
+                                <img src="../img/img_details/recent1.jpg" alt="" class="rounded-lg w-20">
+                                <div class="flex-col pt-1 pl-6">
+                                    <a href="#" class="text-lg font-medium">Luxury Villa In Rigo Park</a>
+                                    <p>
+                                        <span class="text-red-500 font-medium">$34,000 </span>
+                                        <span>/month</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex mb-3">
+                                <img src="../img/img_details/recent2.jpg" alt="" class="rounded-lg w-20">
+                                <div class="flex-col pt-1 pl-6">
+                                    <a href="#" class="text-lg font-medium">Apartment With 3 BHK</a>
+                                    <p>
+                                        <span class="text-red-500 font-medium">$34,000 </span>
+                                        <span>/month</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex">
+                                <img src="../img/img_details/recent3.jpg" alt="" class="rounded-lg w-20">
+                                <div class="flex-col pt-1 pl-6">
+                                    <a href="#" class="text-lg font-medium">Ready Flat For Rent</a>
+                                    <p>
+                                        <span class="text-red-500 font-medium">$34,000 </span>
+                                        <span>/month</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center border border-gray-300">
+                        <form action="" class="bg-white p-10">
+                            <span class="text-2xl font-medium">Agent Information</span>
+
+                            <div class="flex items-center mt-3">
+                                <img src="../img/img_details/avatar.jpg" alt="" class="w-20 rounded-full">
+                                <div class="flex flex-col ml-4"> 
+                                    <a href="#" class="text-lg font-medium hover:text-cyan-700">Jayden Gabrien</a>
+                                    <span class="text-gray-500 text-sm">Senior Sales Manager</span>
+                                </div>
+                            </div>       
+                            
+                            <div class="border border-gray-200 mt-3 mb-3"></div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex">
+                                    <i class='fas fa-map-marker-alt pt-1'></i> <span class="text-gray-500 pl-4">302 Ave PArk, New York</span>
+                                </div>
+                                <div class="flex">
+                                    <i class='fas fa-phone pt-1'></i> <span class="text-gray-500 pl-3">+222 023 4563 123</span>
+                                </div>
+                                <div class="flex">
+                                    <i class='fas fa-envelope-open pt-1'></i> <span class="text-gray-500 pl-4">info@jaiden.com</span>
+                                </div>
+                            </div>
+
+                            <div class="border border-gray-200 mt-3 mb-3"></div>
+
+                            <input type="text" class="mt-5 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Full Name">
+                            <input type="text" class="mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Phone Number">
+                            <input type="email" class="mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Email Address">
+                            <select id="family-members" class="mb-3 bg-gray-50 border border-gray-300 text-gray-400 text-base focus:ring-blue-500 focus:border-blue-500  w-full h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="padding-left:18px;">
+                                <option selected>Family Members</option>
+                                <option value="$">2</option>
+                                <option value="$">4</option>
+                                <option value="$">6</option>
+                            </select>
+                            <select id="childrens" class="mb-3 bg-gray-50 border border-gray-300 text-gray-400 text-base focus:ring-blue-500 focus:border-blue-500  w-full h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="padding-left:18px;">
+                                <option selected>Family Members</option>
+                                <option value="$">1</option>
+                                <option value="$">2</option>
+                                <option value="$">3</option>
+                            </select>
+                            <textarea name="" id="" placeholder="Your Message" class="mb-3 pl-5 pt-3 w-full h-32 border border-gray-300"></textarea>
+                            <button class="bg-red-500 hover: hover:bg-green-300 text-white hover:text-black" style="width: 200px; height: 47px;">Submit Request</button>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <footer class="info-contact flex justify-center items-center bg-gray-600">
+            <div class="grid grid-cols-3 gap-16 p-12">
+                <div class="flex-col flex justify-center items-center">
+                    <div class="flex gap-8">
+                        <div class="flex flex-col mt-2">
+                            <span class="text-white">Price Item One</span>
+                            <span class="text-white">Price Item Two</span>
+                            <span class="text-white">Price Item Three</span>
+                        </div>
+        
+                        <div class="flex flex-col mt-2">
+                            <span class="text-white">Price Item One</span>
+                            <span class="text-white">Price Item Two</span>
+                            <span class="text-white">Price Item Three</span>
+                        </div>
+                    </div>
+                    <span class="pt-5 text-white text-sm">Just type what's on your mind </span>
+                </div>
+    
+                <img src="../img/img_contact/map.png" class="rounded-xl" style="width: 280px; height: 200px;">
+    
+                <div class="flex-col pt-12 pl-5">
+                    <div class="flex">
+                        <img src="../img/img_contact/location.svg" class="" style="width: 30px; height: 30px;">
+                        <span class="text-white pl-2">7480 Mockingbird Hill undefined </span>
+                    </div>
+    
+                    <div class="flex pt-3">
+                        <img src="../img/img_contact/mobile.svg" class="" style="width: 28px; height: 28px;">
+                        <span  class="text-white pl-2">(239) 555-0108</span>
+                    </div>
+    
+                    <div class="flex pt-5 gap-4">
+                        <img src="../img/img_contact/tw.svg" class="" style="width: 28px; height: 28px;">
+                        <img src="../img/img_contact/fb.svg" class="" style="width: 28px; height: 28px;"">
+                        <img src="../img/img_contact/in.svg" class="" style="width: 28px; height: 28px;">
+                    </div>
+                </div>
+            </div>
+        </footer>   -->
+    </div>
+
+        <!-- Modal -->
+        <div id="md-openmap" class="fixed inset-0 z-50 flex justify-center items-center bg-gray-900 bg-opacity-50">
+            <div class="modal-content">
+                <!-- Nút để đóng modal -->
+                <button id="closeModalBtn" class="absolute top-2 right-2 bg-red-500 text-white p-2 rounded">Close</button>
+                <!-- Iframe để nhúng index.html từ projectA -->
+                <iframe id="mapModal" src="../MapBox/index.html"></iframe>
+            </div>
+        </div>
+    
+        <!-- Thêm các tệp JavaScript của bạn ở đây -->
+        <script>
+            // Mã JavaScript để mở và đóng modal
+            document.addEventListener('DOMContentLoaded', () => {
+                const modal = document.getElementById('md-openmap');
+                const openModalBtn = document.getElementById('openModalBtn');
+                const closeModalBtn = document.getElementById('closeModalBtn');
+    
+                openModalBtn.addEventListener('click', () => {
+                    modal.classList.add('active');
+                });
+    
+                closeModalBtn.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+            });
+        </script>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

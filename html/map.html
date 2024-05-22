@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="../css/map.css" >
+</head>
+<body>
+
+    <div class="Map_Container">
+        <img src="./image/Image2.png" alt="Map_image" class="Map_image">
+        <svg class="line"> </svg>
+        <div class="Weight">
+            <h3 id="Node1_to_Node2">5</h3>               
+            <h3 id="Node2_to_Node3">7</h3>               
+            <h3 id="Node3_to_Node4">18</h3>               
+            <h3 id="Node3_to_Node6">15</h3>               
+            <h3 id="Node4_to_Node5">13</h3>               
+            <h3 id="Node5_to_Node6">20</h3>               
+            <h3 id="Node5_to_Node10">10</h3>               
+            <h3 id="Node6_to_Node7">3</h3>               
+            <h3 id="Node7_to_Node8">12</h3>               
+            <h3 id="Node7_to_Node9">7</h3>               
+            <h3 id="Node9_to_Node10">20</h3>               
+        </div>
+        <div class="icon" id="node1" style="top: 132px; left: 195px;">  <div class="number">1</div> </div>      
+        <div class="icon" id="node2" style="top: 170px; left: 95px;">   <div class="number">2</div> </div>      
+        <div class="icon" id="node3" style="top: 335px; left: 100px;">  <div class="number">3</div> </div> 
+        <div class="icon" id="node4" style="top: 685px; left: 180px;">  <div class="number">4</div> </div>    
+        <div class="icon" id="node5" style="top: 680px; left: 455px;">  <div class="number">5</div> </div>                               
+        <div class="icon" id="node6" style="top: 275px; left: 390px;">  <div class="number">6</div> </div>   
+        <div class="icon" id="node7" style="top: 267px; left: 478px;">  <div class="number">7</div> </div> 
+        <div class="icon" id="node8" style="top: 58px; left: 457px;">   <div class="number">8</div> </div>  
+        <div class="icon" id="node9" style="top: 255px; left: 638px;"> <div class="number">9</div> </div>                                              
+        <div class="icon" id="node10" style="top: 650px; left: 680px;">  <div class="number">10</div> </div>       
+    </div>        
+
+    <div class="Element">
+     
+        <h4 id="Title_Start">Chọn vị trí bắt đầu: </h4>
+        <select id="cbb_Items_Start"></select>  
+        <h4 id="Title_End">Chọn vị trí kết thúc: </h4>        
+        <select id="cbb_Items_End"></select>   
+        <button class="btn_Search">Search</button>       
+    </div>
+    <!-- main js -->
+    <script src="../js/map.js"></script>
+</body>
+</html>

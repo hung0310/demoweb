@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+    <script src="../path/to/flowbite/dist/datepicker.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Flat rent Web</title>
+</head>
+<body>
+    <div class="page-detail">
+        <header tabindex="-1" class="header-wrap fixed top-0 start-0 z-50 flex justify-between w-full h-auto border-b border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+            <div class="container pl-10 pr-10 flex">
+                <nav class="flex">
+                    <a class="navbar-brand" href="../html/index.html">
+                        <img src="../img/logo.png" alt="" class="flex" style="width: 192px; height: 140px;">
+                    </a>
+                    <div class="navbar-menu pt-16" style="width: 1000px;">
+                        <ul class="ul-menu flex center justify-center items-center" style="gap: 70px;">
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#">About Us</a>
+                            </li>
+                            <li class="li-menu hover:text-green-600 font-medium">
+                                <a href="#" id="add-new-property">Add New Property</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-btn flex pt-5 w-max" style="gap: 25px;">
+                        <button id="sign-in" class="bg-green-500 mt-5 rounded-lg hover:bg-green-400 text-white" style="width: 120px; height: 50px;">Sign in</button>
+                        <button id="sign-up" class="bg-green-500 mt-5 rounded-lg hover:bg-green-400 text-white" style="width: 120px; height: 50px;">Sign up</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <footer class="info-contact flex justify-center items-center bg-gray-600">
+            <div class="grid grid-cols-3 gap-16 p-12">
+                <div class="flex-col flex justify-center items-center">
+                    <div class="flex gap-8">
+                        <div class="flex flex-col mt-2">
+                            <span class="text-white">Price Item One</span>
+                            <span class="text-white">Price Item Two</span>
+                            <span class="text-white">Price Item Three</span>
+                        </div>
+        
+                        <div class="flex flex-col mt-2">
+                            <span class="text-white">Price Item One</span>
+                            <span class="text-white">Price Item Two</span>
+                            <span class="text-white">Price Item Three</span>
+                        </div>
+                    </div>
+                    <span class="pt-5 text-white text-sm">Just type what's on your mind </span>
+                </div>
+    
+                <img src="../img/img_contact/map.png" class="rounded-xl" style="width: 280px; height: 200px;">
+    
+                <div class="flex-col pt-12 pl-5">
+                    <div class="flex">
+                        <img src="../img/img_contact/location.svg" class="" style="width: 30px; height: 30px;">
+                        <span class="text-white pl-2">7480 Mockingbird Hill undefined </span>
+                    </div>
+    
+                    <div class="flex pt-3">
+                        <img src="../img/img_contact/mobile.svg" class="" style="width: 28px; height: 28px;">
+                        <span  class="text-white pl-2">(239) 555-0108</span>
+                    </div>
+    
+                    <div class="flex pt-5 gap-4">
+                        <img src="../img/img_contact/tw.svg" class="" style="width: 28px; height: 28px;">
+                        <img src="../img/img_contact/fb.svg" class="" style="width: 28px; height: 28px;"">
+                        <img src="../img/img_contact/in.svg" class="" style="width: 28px; height: 28px;">
+                    </div>
+                </div>
+            </div>
+        </footer> 
+
+        <section class="">
+            <div class="grid grid-cols-5 gap-4">
+
+                <div class="col-span-2 pt-10">
+                    <div class="p-20 border border-gray-300 h-full">
+                        <div class="flex flex-col">
+                            <span class="text-xl font-medium">Property Information</span>
+                            <span class="text-gray-500 pt-5">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-span-3">
+                    <div class="flex justify-center items-center p-5"></div>
+                        <form action="" class="bg-white p-10 border border-gray-300">
+                            <label for="">Property Name</label>
+                            <input type="text" class="mt-2 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Enter Name">
+                            <label for="">Address</label>
+                            <input type="text" class="mt-2 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Enter Address">
+                            <label for="">City</label>
+                            <input type="text" class="mt-2 mb-3 w-full h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Enter City">
+                            <label for="">Description</label>
+                            <textarea name="" id="" placeholder="Enter Description" class="mb-3 pl-5 pt-3 w-full h-32 border border-gray-300"></textarea>
+
+                            <div class="flex gap-12 mt-5">
+                                <div class="flex flex-col">
+                                    <label for="">Price</label>
+                                    <input type="text" class="mt-2 mb-3 w-60 h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Enter Price">
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="">Bedrooms</label>
+                                    <input type="text" class="mt-2 mb-3 w-60 h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Enter Bedroom">
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="">Bathrooms</label>
+                                    <input type="text" class="mt-2 mb-3 w-60 h-12 border border-gray-200" style="padding-left: 20px;" placeholder="Enter Bathroom">
+                                </div>
+                            </div>
+
+                            <div class="flex gap-12 mt-5">
+
+                                <div class="flex flex-col">
+                                    <label for="">Sale Type</label>
+                                    <select id="childrens" class="mt-3 bg-gray-50 border border-gray-300 text-gray-400 text-base focus:ring-blue-500 focus:border-blue-500  w-60 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="padding-left:18px;">
+                                        <option value="$">For Rent</option>
+                                        <option value="$">Sale</option>
+                                    </select>
+                                </div>
+
+                                <div class="flex flex-col">
+                                    <label for="">Home Type</label>
+                                    <select id="childrens" class="mt-3 bg-gray-50 border border-gray-300 text-gray-400 text-base focus:ring-blue-500 focus:border-blue-500  w-60 h-12 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" style="padding-left:18px;">
+                                        <option value="$">House</option>
+                                        <option value="$">Apartment</option>
+                                        <option value="$">Villa</option>
+                                        <option value="$">Condo</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-20 mt-5">
+                                <div class="flex flex-col">
+                                    <label for="">Main Photo</label>
+                                    <input type="file" class="mt-2 mb-3 w-96 h-12 border border-gray-200" style="padding: 10px;">
+                                </div>
+                                
+                            </div>
+
+                            <div class="flex mt-5">
+                                <div class="flex flex-col">
+                                    <a href="#" for="" class="hover:text-sky-400">Description Photo (Click)</a>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center items-center mt-5">
+                                <button class="mt-8 bg-red-500 hover: hover:bg-blue-500 text-white hover:text-black" style="width: 200px; height: 47px;" type="submit">Submit</button> 
+                            </div>
+                             
+
+                        </form>
+                    </div>
+            </div>
+        </section>
+ 
+    </div>
+</body>
+</html>

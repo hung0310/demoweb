@@ -1,0 +1,141 @@
+/* body {
+  overflow: hidden;
+  } */
+:root {
+  --green: #54b192;
+  --green-l: #a4cec0;
+  --gray: #3f3d56;
+  --pink-red: #ed4c67;
+  --smooth: all 0.3s ease-in;
+}
+
+.Map_Container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+}
+
+.Map_image {
+  width: 100%;
+  height: auto;
+}
+
+.icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+#cbb_Items_Start {
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  right: 400px;
+  width: 100px;
+  height: 20px;
+}
+#cbb_Items_End {
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  right: 400px;
+  width: 100px;
+  height: 20px;
+}
+#Title_Start {
+  position: absolute;
+  top: 30px;
+  right: 510px;
+}
+#Title_End {
+  position: absolute;
+  top: 80px;
+  right: 508px;
+}
+.btn_Search {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  background-color: var(--pink-red);
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 80px;
+  cursor: pointer;
+  transition: var(--smooth);
+  top: 150px;
+  right: 460px;
+}
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  height: 100%;
+}
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+}
+#Node1_to_Node2 {
+  position: absolute;
+  top: 110px;
+  right: 640px;
+}
+#Node2_to_Node3 {
+  position: absolute;
+  top: 220px;
+  right: 650px;
+}
+#Node3_to_Node4 {
+  position: absolute;
+  top: 500px;
+  right: 670px;
+}
+#Node3_to_Node6 {
+  position: absolute;
+  top: 250px;
+  right: 520px;
+}
+#Node4_to_Node5 {
+  position: absolute;
+  top: 630px;
+  right: 450px;
+}
+#Node5_to_Node6 {
+  position: absolute;
+  top: 480px;
+  right: 380px;
+}
+#Node5_to_Node10 {
+  position: absolute;
+  top: 610px;
+  right: 200px;
+}
+#Node6_to_Node7 {
+  position: absolute;
+  top: 225px;
+  right: 350px;
+}
+#Node7_to_Node8 {
+  position: absolute;
+  top: 150px;
+  right: 280px;
+}
+#Node7_to_Node9 {
+  position: absolute;
+  top: 220px;
+  right: 230px;
+}
+#Node9_to_Node10 {
+  position: absolute;
+  top: 450px;
+  right: 150px;
+}
